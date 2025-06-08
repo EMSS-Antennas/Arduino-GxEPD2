@@ -403,6 +403,7 @@ void GxEPD2_290_T94_V2::_Update_Full()
   _writeCommand(0x20);
   _waitWhileBusy("_Update_Full", full_refresh_time);
   _power_is_on = false;
+  DISP_UPDATE_CNT++;
 }
 
 void GxEPD2_290_T94_V2::_Update_Part()
@@ -413,4 +414,5 @@ void GxEPD2_290_T94_V2::_Update_Part()
   _writeCommand(0x20);
   _waitWhileBusy("_Update_Part", partial_refresh_time);
   _power_is_on = true;
+  DISP_UPDATE_CNT++;
 }

@@ -23,6 +23,7 @@ class GxEPD2_290_T94_V2 : public GxEPD2_EPD
 {
   public:
     // attributes
+    unsigned long DISP_UPDATE_CNT; // Byte value to be stored
     static const uint16_t WIDTH = 128;
     static const uint16_t WIDTH_VISIBLE = WIDTH;
     static const uint16_t HEIGHT = 296;
@@ -36,6 +37,7 @@ class GxEPD2_290_T94_V2 : public GxEPD2_EPD
     static const uint16_t partial_refresh_time = 750; // ms, e.g. 736721us
     // constructor
     GxEPD2_290_T94_V2(int16_t cs, int16_t dc, int16_t rst, int16_t busy);
+    unsigned long updateCount(){return DISP_UPDATE_CNT;}
     // methods (virtual)
     //  Support for Bitmaps (Sprites) to Controller Buffer and to Screen
     void clearScreen(uint8_t value = 0xFF); // init controller memory and screen (default white)
