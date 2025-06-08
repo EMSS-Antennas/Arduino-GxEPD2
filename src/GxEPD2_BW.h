@@ -247,9 +247,9 @@ class GxEPD2_BW : public GxEPD2_GFX_BASE_CLASS
       setFullWindow();
     }
 
-    unsigned long updateCount()
+    unsigned long getUpdateCount()
     {
-      return epd2.updateCount();
+      return epd2.getUpdateCount();
     }
 
     uint16_t pages()
