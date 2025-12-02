@@ -252,9 +252,9 @@ class GxEPD2_BW : public GxEPD2_GFX_BASE_CLASS
       return epd2.getUpdateCount();
     }
 
-    void setUpdateCount(unsigned long)
+    void setUpdateCount(unsigned long cnt)
     {
-      return epd2.setUpdateCount(unsigned long);
+      epd2.setUpdateCount(cnt);
     }
 
     uint16_t pages()
